@@ -1,0 +1,160 @@
+/* App.css - Modern, responsive, and easy-to-read styling */
+
+/*
+  The app container. It handles the full-page layout,
+  centering, and a clean gradient background.
+*/
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: #0f2027; /* Fallback color */
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  font-family: 'Inter', sans-serif; /* Using a modern font */
+}
+
+/*
+  Styling for the search bar. We use a transparent background
+  and rounded corners for a clean, integrated look.
+*/
+.search {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.search input {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/*
+  The main container for weather data.
+  This is where the glassmorphism effect is applied.
+*/
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  text-align: center;
+}
+
+/*
+  The top section contains the location, temperature, and description.
+*/
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.location p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.temp h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.description p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.weather-icon svg {
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+/*
+  The bottom section for details like 'feels like', humidity, and wind speed.
+  Using a CSS Grid for a clean, responsive layout.
+*/
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.feels, .humidity, .wind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: #ffcccc;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/*
+  Media queries to make the layout responsive on smaller screens.
+*/
+@media (max-width: 500px) {
+  .temp h1 {
+    font-size: 3.5rem;
+  }
+  .bottom {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
