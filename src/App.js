@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import { useState} from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -7,7 +7,8 @@ function App() {
   const [location, setLocation] = useState('');
   const [error, setError] = useState('');
 
-  const apiKey = 'af5ec1c3acbe7ab97f388e73ed4d0c1c'; 
+  const apiKey = process.env.REACT_APP_APIKEY;
+  console.log(apiKey);
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
 
