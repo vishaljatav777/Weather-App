@@ -2,16 +2,6 @@
 
 A simple, responsive weather application built with React that lets users check the current weather of any city in real time using the OpenWeatherMap API.
 
----
-
-## 📸 Demo
-
-![Weather App Screenshot](public/demo.png) <!-- Replace with your screenshot path -->
-
-Live Demo: [your-live-demo-link.com](https://your-live-demo-link.com)
-
----
-
 ## 🚀 Features
 
 - 🔍 Search weather by city name
